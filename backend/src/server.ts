@@ -521,7 +521,7 @@ app.put('/api/notifications/:id/read', authenticate, (req, res) => {
 });
 
 // ==================== SEED DATA ENDPOINT (DEV ONLY) ====================
-app.post('/api/seed', (req, res) => {
+app.get('/api/seed', (req, res) => {
   try {
     // Create admin
     const adminPass = bcrypt.hashSync('admin123', 10);
